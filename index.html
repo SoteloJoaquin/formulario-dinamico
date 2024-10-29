@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Dinámico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario Dinámico</h1>
+    <form id="dynamicForm">
+        <label>¿Tienes experiencia previa en programación?</label><br>
+        <input type="radio" name="experience" value="si" onclick="showQuestion('si')"> Sí<br>
+        <input type="radio" name="experience" value="no" onclick="showQuestion('no')"> No<br>
+
+        <div id="questionSi" class="hidden">
+            <label>¿Qué lenguajes de programación conoces?</label><br>
+            <input type="text" name="languages"><br>
+        </div>
+
+        <div id="questionNo" class="hidden">
+            <label>¿Estás interesado en aprender programación?</label><br>
+            <input type="text" name="interest"><br>
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
